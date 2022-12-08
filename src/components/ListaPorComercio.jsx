@@ -168,7 +168,7 @@ export const ListaPorComercio = () => {
                 </div>
               ) 
             : (
-                <div className="col col-xl-3 col-lg-7">
+                <div className="col col-xl-6 col-lg-7">
                   <div className="container">
                     <div className="row">
                       <CarritoPorComercio data={listado} />

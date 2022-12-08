@@ -308,13 +308,13 @@ export const CargarProducto = () => {
                     (
                     <div>
                       <button
-                        className="w-auto btn btn-md btn-success me-3"
+                        className="w-auto btn btn-sm btn-success me-3"
                         type="submit"
                       >
                         Actualizar
                       </button>
                       <button
-                        className="w-auto btn btn-md btn-danger ms-3"
+                        className="w-auto btn btn-sm btn-danger ms-3"
                         type="button"
                         onClick={formAgregar}
                       >
@@ -378,7 +378,7 @@ export const CargarProducto = () => {
                                   fontSize="large"
                                   color="error"
                                   className="ms-3"
-                                  onClick={() => editar(prod)}
+                                  onClick={() => eliminar(prod._id)}
                                 />
 
                                 {/* <button

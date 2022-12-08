@@ -10,7 +10,7 @@ export const CartItems = ({ data, deleteFromCart }) => {
       <td><small>{data.presentacion}</small></td>
       <td><small>{data.cantidad}</small></td>
       <td>
-          <RemoveCircleOutlineTwoToneIcon type="button" fontSize="large" onClick={()=>deleteFromCart(data._id)}/>
+          <RemoveCircleOutlineTwoToneIcon  type="button" fontSize="large" onClick={()=>deleteFromCart(data._id)}/>
           {/* <svg data-testid="DeleteSweepIcon" onClick={()=>deleteFromCart(data._id)}></svg> */}
         {/* <small>
           <button type="button" className="btn btn-primary btn-sm" onClick={()=>deleteFromCart(data._id)}>
@@ -22,7 +22,7 @@ export const CartItems = ({ data, deleteFromCart }) => {
       </td>
 
       <td>
-      <DeleteTwoToneIcon type="button" fontSize="large" onClick={()=>deleteFromCart(data._id, true)}/>
+      <DeleteTwoToneIcon type="button" name='Eliminar' fontSize="large" onClick={()=>deleteFromCart(data._id, true)}/>
 
         {/* <small>
           <button type="button" className="btn btn-warning btn-sm" onClick={()=>deleteFromCart(data._id, true)}>
