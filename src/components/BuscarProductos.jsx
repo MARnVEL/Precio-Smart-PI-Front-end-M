@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { Tabla } from './Tabla';
 
 export const BuscarProductos = () => {
+
+  //*Cuando tenemos 2 o más estados que cambian simultáneamente y unos dependen de los demás, es mejor usar el hook useReduce.
   //hook de usestate
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
@@ -158,7 +161,10 @@ export const BuscarProductos = () => {
         
         {/* ************************************************************************************ */}
         {/* //!TABLA */}
-        <table className="table table-striped table-hover mt-5 shadow-lg table-control">
+
+        <Tabla results={ results }/>
+
+        {/* <table className="table table-striped table-hover mt-5 shadow-lg table-control">
           <thead className='table-active'>
             <tr>
               <th>Nombre</th>
@@ -167,10 +173,6 @@ export const BuscarProductos = () => {
               <th>Precio</th>
               <th>Comercio</th>
             </tr>
-            {/* {search ? (
-            ) : (
-              <tr></tr>
-            )} */}
           </thead>
 
           <tbody>
@@ -184,7 +186,7 @@ export const BuscarProductos = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
       </div>
     </>
     

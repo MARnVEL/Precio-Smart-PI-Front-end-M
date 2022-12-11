@@ -3,7 +3,6 @@ import React, { useContext, useState } from "react";
 import img from "../assets/img/verificar.png";
 import { AuthContext } from "../context/AuthContext";
 import { type } from "../types/type";
-import { Navigate } from "react-router-dom";
 
 // Diseñar el formulario de inicio de sesión y programar los eventos de formulario
 // Como así también el envío de los datos al servidor
@@ -64,7 +63,8 @@ export const Login = () => {
           active: data.user.active,
           comercio: data.comerce,
         };
-        authDispatch({ type: "AUTH_LOGIN", payload: user });
+        
+        authDispatch({ type: type.authLogin, payload: user });
         localStorage.setItem("user", JSON.stringify(user));
       }
     })();
@@ -167,8 +167,8 @@ export const Login = () => {
         </div>
       </div>
 
+      {/* Modal Registro*/}
       <div>
-        {/* Modal Registro*/}
         <div
           className="modal fade"
           id="exampleModal"
@@ -236,7 +236,7 @@ export const Login = () => {
                           type="email"
                           className="form-control"
                           id="floatingEmail"
-                          placeholder="Example@email.com"
+                          placeholder="example@email.com"
                           onChange={handleInputChange}
                           name="email"
                           value={email}
@@ -252,6 +252,7 @@ export const Login = () => {
                           onChange={handleInputChange}
                           name='rol'
                         >
+                          <option value="cliente">Cliente</option>
                           <option value="cliente">Cliente</option>
                           <option value="comerciante">Comerciante</option>
                         </select>
@@ -282,6 +283,8 @@ export const Login = () => {
           </div>
         </div>
       </div>
+
+
     </div>
   );
 };
