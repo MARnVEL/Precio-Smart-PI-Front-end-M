@@ -12,11 +12,13 @@ export const ProductItems = ({data, addToCart}) => {
       <td>
       <ShoppingCartCheckoutTwoToneIcon type="button" fontSize="large" onClick={()=>addToCart(data._id)}/>
 
-        {/* <small>
+      {/*
+      <small>
           <button type="button" className="btn btn-outline-danger btn-sm" onClick={()=>addToCart(data._id)}>
             <small>Agregar</small>
           </button>
-        </small> */}
+      </small> 
+      */}
       </td>
     </tr>
 
@@ -25,10 +27,17 @@ export const ProductItems = ({data, addToCart}) => {
     //     <div className="card-body">
     //       <p>{data.productName}</p>
     //       <p>{data.marca}</p>
-    //       {/* <p>{data.precio}</p> */}
-    //       <button type="button" className="btn btn-primary btn-sm" onClick={()=>addToCart(data._id)}>Add to Cart</button>
+    //       <p>{data.precio}</p>
+    //       <button 
+    //             type="button"
+    //             className="btn btn-primary btn-sm"
+    //             onClick={()=>addToCart(data._id)}
+    //           >
+    //             Add to Cart
+    //           </button>
     //     </div>
     //   </div>
     // </div>
+    
   );
 };

@@ -9,9 +9,9 @@ import { CartItems } from "./cartItems";
 import { ProductItems } from "./productItems";
 
 export const ListaPorComercio = () => {
-  const [listado, setListado] = useState({ typo: false });
+  const [ listado, setListado ] = useState({ typo: false });
 
-  const [products, setProducts] = useState([]);
+  const [ products, setProducts ] = useState([ ]);
   const showData = async () => {
     const resp = await fetch("http://localhost:4000/productos");
     const data = await resp.json();

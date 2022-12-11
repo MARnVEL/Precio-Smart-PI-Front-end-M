@@ -61,7 +61,6 @@ export const BuscarProductos = () => {
   //! Funcion de BÚSQUEDA
   const buscador = (e) => {
     setSearch(e.target.value);
-
   }
   
   // //Metodo de filtrado comun:
@@ -93,11 +92,11 @@ export const BuscarProductos = () => {
         <div className="container">
           <div className="row">
 
+            {/* ************************************************************************************ */}
+            {/* //!FILTRO POR COMERCIO */}
             <div className="col-lg-3 justify-content-center ">
               <div className="mb-3">
-                {/* <label htmlFor="" class="form-label">
-                  Zona
-                </label> */}
+
                 <select 
                   className="form-select"
                   name="comercios"
@@ -117,6 +116,8 @@ export const BuscarProductos = () => {
               </div>
             </div>
 
+            {/* ************************************************************************************ */}
+            {/* //!FILTRO POR CATEGORÍA */}
             <div className="container col-lg-3 justify-content-center ">
               <div className="mb-3">
                 
@@ -138,7 +139,9 @@ export const BuscarProductos = () => {
                 </select>
               </div>
             </div>
-
+            
+            {/* ************************************************************************************ */}
+            {/* //!BARRA DE BÚSQUEDA */}
             <div className="col-lg-6">
               <input
                 value={search}
@@ -148,13 +151,12 @@ export const BuscarProductos = () => {
                 className="form-control mb-3"
                 autoFocus={true}
               />
-
             </div>
-
 
           </div>
         </div>
         
+        {/* ************************************************************************************ */}
         {/* //!TABLA */}
         <table className="table table-striped table-hover mt-5 shadow-lg table-control">
           <thead className='table-active'>
