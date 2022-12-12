@@ -1,8 +1,8 @@
 # Aplicación para buscar precios de productos de consumo masivo en una base de datos de comercios previamente cargados.
 ## Herramientas:
 
-<div align="center" style={display: flex}>
-    <span style={margin: 0 100 0 0}>
+<div align="center" style="display: flex">
+    <span style="margin: 0 10 0 0">
         <a href="https://es.javascript.info/" target="_blank">
             <img width="100" title='JavaScript' src='https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'>
         </a>
