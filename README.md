@@ -4,7 +4,7 @@
 <div align="center" style={display: flex}>
     <span>
         <a href="https://es.javascript.info/" target="_blank">
-            <img width="100" src='https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'>
+            <img width="100" title='JavaScript' src='https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'>
         </a>
     </span>
     <span>
@@ -46,7 +46,7 @@
 
 ## Descripción:
 > Este proyecto es : [][].
-> Gracias ****. .
+> Gracias ****.
 > Es p.
 > Una diferencia importante es la utilización de **[][]**
 
