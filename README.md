@@ -1,5 +1,5 @@
-# Lista de items agregados a través de formulario.
-## Uso de los hooks useReduce, useContext, useState de [React][1] en formulario reactivo.
+# Aplicación para buscar precios de productos de consumo masivo en una base de datos de comercios previamente cargados.
+## Herramientas:
 
 <div align="center" style={display: flex}>
     <span>
@@ -49,14 +49,10 @@
 ### Desarrollo front-end con __React__ y **Vite**.
 
 ## Descripción:
-> Este proyecto es una ejercicio copiado de un tutorial del canal: [10 minutos programando][2].
-> Gracias **Español**. Espero que no te enojes por copiarte esto. Pero está en YouTube, así que asumo que no tendrías problemas.
-> Es prácticamente igual al tutorial, pero se diferencia en la arquitectura de carpetas del proyecto. Separé el reducer y los types en otras carpetas, como para que el proyecto pueda seguir creciendo.
-> Una diferencia importante es la utilización de **[vite][3]**, en lugar de create react app!
->También cambié un poquito los estilos y hubo un cambio en la forma de ejecutar el "handleSubmit" del formulario.
-
-
-[![Alt text](https://img.youtube.com/vi/j2-X0Pck9jk/0.jpg)](https://www.youtube.com/watch?v=j2-X0Pck9jk)
+> Este proyecto es : [][].
+> Gracias ****. .
+> Es p.
+> Una diferencia importante es la utilización de **[][]**
 
 ### Para ejecutar el proyecto, se debe tener instalado __Node.js__ y __npm__.
 
