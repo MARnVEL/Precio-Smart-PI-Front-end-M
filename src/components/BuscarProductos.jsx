@@ -161,7 +161,6 @@ export const BuscarProductos = () => {
         
         {/* ************************************************************************************ */}
         {/* //!TABLA */}
-
         <Tabla results={ results }/>
 
         {/* <table className="table table-striped table-hover mt-5 shadow-lg table-control">
