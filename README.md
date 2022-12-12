@@ -2,7 +2,7 @@
 ## Herramientas:
 
 <div align="center" style={display: flex}>
-    <span style={margin: 0 10 0 0}>
+    <span style={margin: 0 100 0 0}>
         <a href="https://es.javascript.info/" target="_blank">
             <img width="100" title='JavaScript' src='https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'>
         </a>
