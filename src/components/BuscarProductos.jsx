@@ -6,8 +6,8 @@ export const BuscarProductos = () => {
   //*Cuando tenemos 2 o más estados que cambian simultáneamente y unos dependen de los demás, es mejor usar el hook useReduce.
   //hook de usestate
   const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState("");
   const [comerces, setComerces] = useState([]);
+  const [search, setSearch] = useState("");
 
   //!Funcion para extraer los PRODUCTOS de la API
   const showData = async ()=>{
@@ -69,9 +69,9 @@ export const BuscarProductos = () => {
   // //Metodo de filtrado comun:
   // let results = [];
   // if (!search) {
-  //   results = users;
+  //   results = products;
   // } else {
-  //   results = users.filter((dato)=> dato.name.toLowerCase().includes(search.toLocaleLowerCase()))
+  //   results = products.filter((dato)=> dato.productName.toLowerCase().includes(search.toLocaleLowerCase()))
   // }
 
   //Filtrado mas resumido

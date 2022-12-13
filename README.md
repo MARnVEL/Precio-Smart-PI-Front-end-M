@@ -59,7 +59,12 @@ npm run dev
 ```bash
 git clone https://github.com/MARnVEL/Precio-Smart-PI-Front-end-M.git
 ```
+### El backend de este proyecto se puede obtener clonando el siguiente repo al eecutar el comando de abajo:
+
+```bash
+git clone https://github.com/MARnVEL/Precio-Smart-PI-Backend-M.git
+```
+
 [1]: https://reactjs.org/
-[2]: https://www.youtube.com/@10MinutosProgramando
 [3]: https://vitejs.dev/
 
