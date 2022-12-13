@@ -16,12 +16,13 @@ function App() {
   const [ user, authDispatch ] = useReducer(authReducer, [], init)
 
   return (
-    <AuthContext.Provider value={{
-      user,
-      authDispatch
-    }}>
+    <AuthContext.Provider 
+      value={
+        { user, authDispatch }
+      }
+    >
       <AppProvider>
-        <AppRouter />
+        <AppRouter/>
       </AppProvider>
     </AuthContext.Provider>
   )

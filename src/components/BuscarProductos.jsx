@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FiltroComercio } from './FiltroComercio';
 import { Tabla } from './Tabla';
 
 export const BuscarProductos = () => {
@@ -97,6 +98,9 @@ export const BuscarProductos = () => {
 
             {/* ************************************************************************************ */}
             {/* //!FILTRO POR COMERCIO */}
+
+            {/* <FiltroComercio /> */}
+
             <div className="col-lg-3 justify-content-center ">
               <div className="mb-3">
 

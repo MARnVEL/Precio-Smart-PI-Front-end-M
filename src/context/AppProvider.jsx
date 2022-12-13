@@ -10,7 +10,7 @@ const useAppContext = (  ) => {
 
 const initialState = {
     products: [],
-    presupuesto: 4000
+    comerces: []
 }
 
 const initNoAuth = ()=>{
@@ -20,16 +20,18 @@ const initNoAuth = ()=>{
 
 const AppProvider = ({ children }) => {
 
-    const [ state, productDispatch ] = useReducer( searchReducer, [], initNoAuth)
+    const [ state, productDispatch ] = useReducer( searchReducer, initialState)
 
     return (
         //Esto lo podríamos hacer directamente en el App.jsx, pero es mejor tener todo aquí para así dejar todo el tema de los datos recluídos acá. Todo se gestiona aquí todo se genera aquí, y simplemente luego en nuestra App.jsx decimos que todos nuestros componentes van a estar incluídos dentro del provider, y luego a partir de eso cada uno de los elementos puede utilizar la información que necesite.
         <AppContext.Provider 
-            value={{ 
-                presupuesto: state.presupuesto, 
-                productos: state.productos, 
-                productDispatch 
-            }}
+            value={
+                {
+                    products: state.products, 
+                    comerces: state.comerces,
+                    productDispatch
+                }
+            }
         >
             {children}
         </AppContext.Provider>

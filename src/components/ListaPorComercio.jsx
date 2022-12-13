@@ -49,15 +49,21 @@ export const ListaPorComercio = () => {
 
   const deleteFromCart = (id, all = false) => {
     if (all) {
-      cartDispatch({type: TYPES.DELETE_ALL_FROM_CART, payload: {
-        id,
-        products
-      }})
+      cartDispatch({
+        type: TYPES.DELETE_ALL_FROM_CART, 
+        payload: {
+          id,
+          products
+        }
+      })
     } else {
-      cartDispatch({type: TYPES.DELETE_ONE_FROM_CART, payload: {
-        id,
-        products
-      }})
+      cartDispatch({
+        type: TYPES.DELETE_ONE_FROM_CART, 
+        payload: {
+          id,
+          products
+        }
+      })
     }
   }
   // console.log(products);
