@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useAppContext } from '../context/AppProvider';
+import { useAppContext } from '../contexts/AppProvider';
 
 export const FiltroComercio = () => {
 

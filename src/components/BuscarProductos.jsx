@@ -10,7 +10,20 @@ export const BuscarProductos = () => {
   const [comerces, setComerces] = useState([]);
   const [search, setSearch] = useState("");
 
+  
+  useEffect( () => {
+    getProducts()
+  }, [])
+
   //!Funcion para extraer los PRODUCTOS de la API
+  const getProducts = async (  ) => {
+    const URL = "http://localhost:4000/productos";
+    const response = await fetch(URL);
+    const data = await response.json();
+    // console.log(data);
+    setProducts(data)
+  }
+
   const showData = async ()=>{
     const URL = "http://localhost:4000/productos";
     const response = await fetch(URL);
@@ -101,7 +114,7 @@ export const BuscarProductos = () => {
 
             {/* <FiltroComercio /> */}
 
-            <div className="col-lg-3 justify-content-center ">
+            {/* <div className="col-lg-3 justify-content-center ">
               <div className="mb-3">
 
                 <select 
@@ -121,11 +134,11 @@ export const BuscarProductos = () => {
                   }
                 </select>
               </div>
-            </div>
+            </div> */}
 
             {/* ************************************************************************************ */}
             {/* //!FILTRO POR CATEGORÍA */}
-            <div className="container col-lg-3 justify-content-center ">
+            {/* <div className="container col-lg-3 justify-content-center ">
               <div className="mb-3">
                 
                 <select 
@@ -133,7 +146,6 @@ export const BuscarProductos = () => {
                   onChange={filtredData}
                 >
 
-                  {/* <option defaultValue>Categoría</option> */}
                   <option defaultValue value="categoria">
                     CATEGORÍA
                   </option>
@@ -145,11 +157,11 @@ export const BuscarProductos = () => {
 
                 </select>
               </div>
-            </div>
+            </div> */}
             
             {/* ************************************************************************************ */}
             {/* //!BARRA DE BÚSQUEDA */}
-            <div className="col-lg-6">
+            {/* <div className="col-lg-6">
               <input
                 value={search}
                 onChange={buscador}
@@ -158,7 +170,7 @@ export const BuscarProductos = () => {
                 className="form-control mb-3"
                 autoFocus={true}
               />
-            </div>
+            </div> */}
 
           </div>
         </div>

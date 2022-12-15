@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 // import "../assets/signin.css";
 import img from "../assets/img/verificar.png";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from '../contexts/AuthContext';
 import { type } from "../types/type";
 
 // Diseñar el formulario de inicio de sesión y programar los eventos de formulario

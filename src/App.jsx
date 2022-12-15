@@ -1,9 +1,9 @@
-import { AuthContext } from './context/AuthContext'
-import { AppRouter } from './routers/AppRouter'
-import './App.css'
 import { useReducer } from 'react'
 import { authReducer } from './reducers/authReducer'
-import { AppProvider } from './context/AppProvider'
+import { AppRouter } from './routers/AppRouter'
+import { AuthContext } from './contexts/AuthContext'
+import { AppProvider } from './contexts/AppProvider'
+import './App.css'
 
 
 //* "init" es una función que cambia el estado inicial de mi App y se lo paso al Reducer que maneja el authReducer, con esto logro que el estado inicial de la App varíe de acuerdo a si init encuentra o no un usuario previamente registrado.

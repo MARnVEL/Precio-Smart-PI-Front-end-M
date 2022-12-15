@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../contexts/AuthContext";
 import { CargarComercio } from "../components/CargarComercio";
 import { CargarProducto } from "../components/CargarProducto";
 import { Productos } from "../components/Productos";

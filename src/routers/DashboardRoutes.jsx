@@ -1,7 +1,7 @@
 import { HomeCliente } from "../pages/HomeCliente";
 import { HomeComerciante } from "../pages/HomeComerciante";
 import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from '../contexts/AuthContext';
 
 export const DashboardRoutes = () => {
   const { user } = useContext(AuthContext);

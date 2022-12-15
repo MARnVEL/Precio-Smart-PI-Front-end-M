@@ -5,6 +5,8 @@ const AppContext = createContext();
 
 //*HOOOK PRESONALIZADO
 const useAppContext = (  ) => {
+    // LA SENTENCIA: useContext( AppContext ) nos DEVUELVE EL VALOR EXACTO DE LO QUE NOSOTROS LE ESTAMOS PROVEYENDO EN EL CONTEXTO. Es decir  si en el "value" del provider le pasamos peras, la sentencia de la que hablo nos devolverá peras.
+    //*Por lo tanto la función useAppContext nos estaría retornando cualquier cosa que noostros pongamos en el "value" del Provider.
     return useContext( AppContext );
 }
 
