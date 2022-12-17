@@ -10,7 +10,6 @@ export const BuscarProductos = () => {
   const [comerces, setComerces] = useState([]);
   const [search, setSearch] = useState("");
 
-  
   useEffect( () => {
     getProducts()
   }, [])
