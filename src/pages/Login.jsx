@@ -113,7 +113,7 @@ export const Login = () => {
                 <input
                   type="text"
                   name="username"
-                  autoComplete="off"
+                  autoComplete="username"
                   className="form-control"
                   placeholder="Username"
                   onChange={handleInputChange}
@@ -197,6 +197,7 @@ export const Login = () => {
                         <input
                           type="text"
                           className="form-control"
+                          autoComplete="username"
                           id="floatingInput"
                           placeholder="Username"
                           onChange={handleInputChange}
@@ -211,6 +212,7 @@ export const Login = () => {
                           type="password"
                           className="form-control"
                           id="floatingPassword"
+                          autoComplete="new-password"
                           placeholder="Password"
                           onChange={handleInputChange}
                           name='password'
@@ -222,6 +224,7 @@ export const Login = () => {
                       <div className="form-floating mb-2">
                         <input
                           type="password"
+                          autoComplete="new-password"
                           className="form-control"
                           id="floatingPassword2"
                           placeholder="Confirm Password"

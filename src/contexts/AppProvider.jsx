@@ -11,13 +11,15 @@ const useAppContext = (  ) => {
 }
 
 const initialState = {
+    loading: true,
+    error: '',
     products: [],
     comerces: []
 }
 
-const initNoAuth = ()=>{
+const initNoAuth = ()=> {
     return JSON.parse(localStorage.getItem('user')) || { isLogged: false }
-    }
+}
 
 
 const AppProvider = ({ children }) => {
@@ -29,6 +31,8 @@ const AppProvider = ({ children }) => {
         <AppContext.Provider 
             value={
                 {
+                    loading: state.loading,
+                    error: state.error,
                     products: state.products, 
                     comerces: state.comerces,
                     productDispatch

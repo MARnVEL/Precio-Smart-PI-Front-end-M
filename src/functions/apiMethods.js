@@ -1,7 +1,7 @@
 
 
 //!Funcion para extraer los PRODUCTOS de la API
-const getProducts = async (  ) => {
+export const getProducts = async (  ) => {
     const URL = 'http://localhost:4000/productos';
     const response = await fetch(URL);
     const data = await response.json();
@@ -11,7 +11,7 @@ const getProducts = async (  ) => {
 
 
 //!Funcion para extraer los PRODUCTOS POR CATEGORÍA de la API
-const getProductsByCategoria = async ( categoria ) => {
+export const getProductsByCategoria = async ( categoria ) => {
   if(categoria === 'todos' || categoria === 'categoria'){
     getProducts();
   }
@@ -23,7 +23,7 @@ const getProductsByCategoria = async ( categoria ) => {
 }
 
 //!Funcion para extraer los PRODUCTOS POR COMERCIO de la API
-const getProductsByComerce = async ( idComerce ) => {
+export const getProductsByComerce = async ( idComerce ) => {
   if(idComerce === 'todos' || idComerce === 'comercio'){
     getProducts();
   }
@@ -36,11 +36,21 @@ const getProductsByComerce = async ( idComerce ) => {
 
 
 //! Función para traer los COMERCIOS de la API
-const getComerces = async () => {
-  const urlComerces = 'http://localhost:4000/comerces';
-  const response = await fetch(urlComerces);
-  const respJSON = await response.json();
-  return respJSON;
+export const getComerces = async () => {
+  const urlComerces = 'http://localhost:4000/comercios';
+  console.log('CLG front-Entra al get comerces');
+  try {
+    console.log('CLG front-Entra al try');
+    const response = await fetch(urlComerces);
+    const respJSON = await response.json();
+    console.log('CLG front-Y esta es la respuesta del back: ', respJSON);
+    // setComerces(respJSON)
+
+
+    return respJSON;
+  } catch (error) {
+    throw new Error('Something went wrong')
+  }
 }
 
 

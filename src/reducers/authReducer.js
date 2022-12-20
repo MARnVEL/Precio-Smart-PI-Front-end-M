@@ -7,10 +7,12 @@ export const authReducer = (state, action) => {
                 ...action.payload
             }
         case type.login:
-            localStorage.setItem('user',JSON.stringify({
+            localStorage.setItem('user',JSON.stringify(
+                {
                 ...action.payload,
                 isLogged: true
-            }))
+                }
+            ))
             
             return {
                 isLogged: true,

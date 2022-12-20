@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FiltroCategoria } from './FiltroCategoria';
 import { FiltroComercio } from './FiltroComercio';
 import { Tabla } from './Tabla';
 
@@ -7,7 +8,7 @@ export const BuscarProductos = () => {
   //*Cuando tenemos 2 o más estados que cambian simultáneamente y unos dependen de los demás, es mejor usar el hook useReduce.
   //hook de usestate
   const [products, setProducts] = useState([]);
-  const [comerces, setComerces] = useState([]);
+  // const [comerces, setComerces] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect( () => {
@@ -32,12 +33,12 @@ export const BuscarProductos = () => {
   }
 
   //! Función para traer los COMERCIOS de la API
-  const getComercios = async () => {
-    const urlComercios = "http://localhost:4000/comercios";
-    const resp = await fetch(urlComercios);
-    const respJSON = await resp.json();
-    setComerces(respJSON);
-  };
+  // const getComercios = async () => {
+  //   const urlComercios = "http://localhost:4000/comercios";
+  //   const resp = await fetch(urlComercios);
+  //   const respJSON = await resp.json();
+  //   setComerces(respJSON);
+  // };
 
   //!Función que establece el estado de productos en productos por categoría, es decir, me cambia el estado y pone en el array de productos sólo los productos que pertencen a la categría que seleccionó el usuario.
   const filtredData = async (e)=> {
@@ -94,7 +95,7 @@ export const BuscarProductos = () => {
   //Hook useEfect
   useEffect(()=>{
     showData()
-    getComercios();
+    // getComercios();
   },[])
   
   //Renderizado
@@ -111,8 +112,9 @@ export const BuscarProductos = () => {
             {/* ************************************************************************************ */}
             {/* //!FILTRO POR COMERCIO */}
 
-            {/* <FiltroComercio /> */}
+            <FiltroComercio />
 
+            
             {/* <div className="col-lg-3 justify-content-center ">
               <div className="mb-3">
 
@@ -133,10 +135,13 @@ export const BuscarProductos = () => {
                   }
                 </select>
               </div>
-            </div> */}
+            </div> 
+            */}
 
             {/* ************************************************************************************ */}
             {/* //!FILTRO POR CATEGORÍA */}
+
+            <FiltroCategoria/>
             {/* <div className="container col-lg-3 justify-content-center ">
               <div className="mb-3">
                 
