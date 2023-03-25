@@ -5,10 +5,9 @@ export const Productos = () => {
 
   const URL = "http://localhost:4000/productos";
 
-    //************************************/
+  //************************************/
 
   const showData = async () => {
-
     const response = await fetch(URL);
 
     const data = await response.json();
@@ -21,39 +20,43 @@ export const Productos = () => {
     showData();
   }, []);
 
-    // const ultimosDiez = products.slice(-10)
-    // console.log(ultimosDiez)
+  // const ultimosDiez = products.slice(-10)
+  // console.log(ultimosDiez)
 
   return (
     <>
       <div className="container">
         <div className="row">
-        <div className="col-lg-12">
-        <h1 className="mt-3">LISTADO DE PRODUCTOS DE TODOS LOS COMERCIOS</h1>
-        <table className="table table-striped table-hover mt-5 shadow-lg table-control rounded border-black">
-          <thead className="thead">
-            <tr>
-              <th>NOMBRE</th>
-              <th>MARCA</th>
-              <th>PRESENTACIÓN</th>
-              <th>PRECIO</th>
-              <th>COMERCIO</th>
-            </tr>
-          </thead>
+          <div className="col-lg-12">
+            <h1 className="mt-3">
+              LISTADO DE PRODUCTOS DE TODOS LOS COMERCIOS
+            </h1>
+            <table
+              className="table table-striped table-hover mt-5 shadow-lg table-control rounded border-black"
+            >
+              <thead className="thead">
+                <tr>
+                  <th>NOMBRE</th>
+                  <th>MARCA</th>
+                  <th>PRESENTACIÓN</th>
+                  <th>PRECIO</th>
+                  <th>COMERCIO</th>
+                </tr>
+              </thead>
 
-          <tbody >
-            {products.map((prod) => (
-              <tr key={prod._id}>
-                <td>{prod.productName}</td>
-                <td>{prod.marca}</td>
-                <td>{prod.presentacion}</td>
-                <td>${prod.precio}</td>
-                <td>{prod.idComercio.commerceName}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+              <tbody>
+                {products.map((prod) => (
+                  <tr key={prod._id}>
+                    <td>{ prod.productName }</td>
+                    <td>{ prod.marca }</td>
+                    <td>{ prod.presentacion }</td>
+                    <td>${ prod.precio }</td>
+                    <td>{ prod.idComercio.commerceName }</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
